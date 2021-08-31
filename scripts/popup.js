@@ -165,14 +165,7 @@ for(var i=0; i< closes.length; i++) {
             document.querySelector('.popup8').classList.remove('open'); // скрываем его
     }
     });
-
-    $(document).mousedown(function (e){ // событие клика по веб-документу
-        var div = $(body); // тут указываем класс элемента
-        if (!div.is(e.target) // если клик был не по нашему блоку
-            && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            document.querySelector('.richesPopupNumber0').classList.remove('open'); // скрываем его
-    }
-    });
+    
     
 // Закрыетие на крестик
 
@@ -256,9 +249,11 @@ for(let i=0; i< richesDetail.length; i++) {
 // Закрытие в свободном месте
 
     $(document).mousedown(function (e){ // событие клика по веб-документу
-    var div = $(body); // тут указываем класс элемента
-    if (!div.is(e.target) // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        document.querySelector('.riches-popup0').classList.remove('open'); // скрываем его
+        var div = $('.riches-popup-body'); // тут указываем класс элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            document.querySelector('.riches-popup0').classList.remove('open'); // скрываем его
     }
     });
+
+    
